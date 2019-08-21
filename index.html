@@ -4,9 +4,12 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Desafio frontend</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="./dist/css/reset.css">
 		<link rel="stylesheet" href="./dist/css/main.css">
+		<link rel="stylesheet" href="./dist/css/media.css">
+
 	</head>
 	<body>
 		<header>
@@ -18,29 +21,37 @@
 		</header>
 		<main>
 			<section class="container">
-				<h2>Você está a poucos passos de otimizar <br/> suas campanhas!</h2>
+				<h2>Você está a poucos passos de otimizar suas campanhas!</h2>
 				<p>Queremos conhecer mais sobre sua empresa para melhorar sua experiência com a Voxus.</p>
-				<form>
-					<div class="input-active">
-						<input type="text" placeholder="Nome Completo"/>
+				<form id="formulario">
+					<div class="input-active" data-text="Nome Completo">
+						<input type="text" name="name" placeholder="Nome Completo" onfocus="this.placeholder=''" onblur="this.placeholder='Nome Completo'"  />
+						<label class="error"></label>
 					</div>
 					<div class="container-telephone">
-						<select>
-							<option class="flag brazil" value="brazil" selected>br</option>
-						</select>
-						<input type="tel" placeholder="Telefone">
-					</div>
-					<div class="input-active">
-						<input type="email" placeholder="Endereço de e-mail"/>
+						<ul class="container-flag">
+							<li>
+								<i class="flag-brazil"></i>	
+							</li>
+						</ul>
+						<div class="input-active" data-text="Telefone">
+							<input type="tel" name="telephone" class="tel" placeholder="Telefone" onfocus="this.placeholder=''" onblur="this.placeholder='Telefone'"  />
+							<label class="error"></label>
+						</div>
+					</div> 
+					<div class="input-active" data-text="Endereço de e-mail"> 
+						<input type="email" name="email" placeholder="Endereço de e-mail" onfocus="this.placeholder=''" onblur="this.placeholder='Endereço de e-mail'"  />
+						<label class="error"></label>
 					</div>
 					
-					<div class="input-active">
-						<input type="text" placeholder="Nome da Empresa"/>
-						<label class="error">teste</label>
+					<div class="input-active" data-text="Nome da Empresa">
+						<input type="text" name="enterpise-name" placeholder="Nome da Empresa" onfocus="this.placeholder=''" onblur="this.placeholder='Nome da Empresa'"  />
+						<label class="error"></label>
 					</div>	
 
-					<div class="input-active">
-						<input type="url" placeholder="URL do site"/>
+					<div class="input-active" data-text="URL do site">
+						<input type="url"  name="url" placeholder="URL do site" onfocus="this.placeholder=''" onblur="this.placeholder='Nome da Empresa'" />
+						<label class="error"></label>
 					</div>
 					<select>
 						<option selected>Verba mensal em midia</option>
@@ -51,7 +62,8 @@
 						<option>>= R$500.001</option>
 						<option>Não se aplica</option>
 					</select>
-					<button>Experimentar gratuitamente</button>
+					<button class="send-form" onclick="return false">Experimentar gratuitamente</button>
+					<span class="obrigado">Entraremos em contato em até 24hs úteis.</span>
 				</form>
 			</section>
 		</main>
@@ -67,5 +79,8 @@
 				<a href="#">Opções de anúncio</a>
 			</nav>
 		</footer>
+		<script src="./dist/js/lib/jquery.min.js"></script>
+		<script src="./dist/js/main.js"></script>
 	</body>
+
 </html>
