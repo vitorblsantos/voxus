@@ -1,13 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Desafio frontend</title>
-	<link rel="stylesheet" href="./dist/reset.css">
-	<link rel="stylesheet" href="./dist/main.css">
-</head>
-<body>
-	
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Desafio frontend</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./dist/css/reset.css">
+		<link rel="stylesheet" href="./dist/css/main.css">
+	</head>
+	<body>
+		<header>
+			<div class="container">	
+				<figure>
+					<img src="./dist/images/logo-voxus.svg" alt="Logo Voxus">
+				</figure>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h2>Você está a poucos passos de otimizar <br/> suas campanhas!</h2>
+				<p>Queremos conhecer mais sobre sua empresa para melhorar sua experiência com a Voxus.</p>
+				<form>
+					<input type="text" placeholder="Nome Completo"/>
+					<div class="container-telephone">
+						<select>
+							<option class="flag brazil" value="brazil" selected>br</option>
+						</select>
+						<input type="tel" placeholder="Telefone">
+					</div>
+					
+					<label></label>
+					<input type="email" placeholder="Endereço de e-mail"/>
+					
+					<input type="text" placeholder="Nome da Empresa"/>
+					<input type="url" placeholder="URL do site"/>
+					<select>
+						<option value="1" selected>Verba mensal em midia</option>
+						<option><= R$5.000</option>
+						<option>>= R$5.001 e <= R$30.000</option>
+						<option>>= R$30.001 e <= R$100.000</option>
+						<option>>= R$100.001 e <= R$500.000</option>
+						<option>>= R$500.001</option>
+						<option>Não se aplica</option>
+					</select>
+					<button>Experimentar gratuitamente</button>
+				</form>
+			</section>
+		</main>
+		<footer>
+			<nav class="container">
+				<a href="./">
+					<figure>
+						<img src="./dist/images/logo-voxus-black.svg" alt="Logo Voxus Preto">
+					</figure>
+				</a>
+				<a href="#">Termos de serviço</a>
+				<a href="#">Política de privacidade</a>
+				<a href="#">Opções de anúncio</a>
+			</nav>
+		</footer>
+	</body>
 </html>
