@@ -21,21 +21,29 @@
 				<h2>Você está a poucos passos de otimizar <br/> suas campanhas!</h2>
 				<p>Queremos conhecer mais sobre sua empresa para melhorar sua experiência com a Voxus.</p>
 				<form>
-					<input type="text" placeholder="Nome Completo"/>
+					<div class="input-active">
+						<input type="text" placeholder="Nome Completo"/>
+					</div>
 					<div class="container-telephone">
 						<select>
 							<option class="flag brazil" value="brazil" selected>br</option>
 						</select>
 						<input type="tel" placeholder="Telefone">
 					</div>
+					<div class="input-active">
+						<input type="email" placeholder="Endereço de e-mail"/>
+					</div>
 					
-					<label></label>
-					<input type="email" placeholder="Endereço de e-mail"/>
-					
-					<input type="text" placeholder="Nome da Empresa"/>
-					<input type="url" placeholder="URL do site"/>
+					<div class="input-active">
+						<input type="text" placeholder="Nome da Empresa"/>
+						<label class="error">teste</label>
+					</div>	
+
+					<div class="input-active">
+						<input type="url" placeholder="URL do site"/>
+					</div>
 					<select>
-						<option value="1" selected>Verba mensal em midia</option>
+						<option selected>Verba mensal em midia</option>
 						<option><= R$5.000</option>
 						<option>>= R$5.001 e <= R$30.000</option>
 						<option>>= R$30.001 e <= R$100.000</option>
